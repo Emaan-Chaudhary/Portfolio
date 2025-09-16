@@ -3,7 +3,7 @@ name: React Build & Deploy to S3
 on:
   push:
     branches:
-      - master  # ya tumhari main branch
+      - master  # Your main branch
 
 jobs:
   build-deploy:
@@ -33,15 +33,18 @@ jobs:
         uses: aws-actions/s3-sync@v2
         with:
           source-dir: build/
-          bucket: ${{ secrets.AWS_BUCKET_NAME }}
-          region: ${{ secrets.AWS_REGION }}
+          bucket: myself-emaan-bucket
+          region: us-east-2
           delete: true
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
 
       # 6️⃣ CloudFront Invalidate
       - name: Invalidate CloudFront Cache
         run: |
           aws cloudfront create-invalidation \
-            --distribution-id ${{ secrets.CLOUDFRONT_DIST_ID }} \
+            --distribution-id E1Y0AGZN4LJQXZ \
             --paths "/*"
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
