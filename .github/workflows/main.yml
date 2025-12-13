@@ -38,11 +38,5 @@ jobs:
 
       # 6️⃣ Deploy build folder to S3
       - name: Deploy to S3
-        run: aws s3 sync build/ s3://myself-emaan-bucket --delete 
+        run: aws s3 sync build/ s3://myself-emaan-bucket2 --delete 
 
-      # 7️⃣ Invalidate CloudFront cache
-      - name: Invalidate CloudFront Cache
-        run: |
-          aws cloudfront create-invalidation \
-            --distribution-id E1Y0AGZN4LJQXZ \
-            --paths "/*"
