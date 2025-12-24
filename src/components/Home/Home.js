@@ -21,7 +21,8 @@ function Home() {
               </h1>
 
               <h1 className="heading-name">
-              This is Our OOAD Project by 
+                         Thank you MISS SARFRAZ  From  23-ARID-643, 23-ARID-743, 23-ARID-671
+
                 <strong className="main-name"> Emaan Chaudhary,Sayeqa noor ,Malaika Arshad </strong>
               </h1>
 
