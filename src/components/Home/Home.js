@@ -21,8 +21,8 @@ function Home() {
               </h1>
 
               <h1 className="heading-name">
-                I'M
-                <strong className="main-name"> Emaan Chaudhary </strong>
+              This is Our OOAD Project by 
+                <strong className="main-name"> Emaan Chaudhary,Sayeqa noor ,Malaika Arshad </strong>
               </h1>
 
               <div style={{ padding: 50, textAlign: "left" }}>
